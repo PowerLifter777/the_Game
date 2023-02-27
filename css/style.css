@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  color: blueviolet;
+  font-weight: 500;
+  user-select: none;
+}
+
+#table {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 3px solid rgba(0, 38, 255, 0.25);
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+}
+
+.cell {
+  border: 0.5px solid rgba(137, 43, 226, 0.15);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.controlls {
+  margin-top: 24px;
+  display: flex;
+  gap: 18px;
+}
+
+.btn {
+  color: inherit;
+  min-width: 135px;
+  padding: 8px 21px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 255, 0.33);
+  font-weight: 700;
+}
+
+.btn[disabled] {
+  color: rgba(137, 43, 226, 0.2);
+  border: 1px solid rgba(0, 0, 255, 0.2);
+}
+
+.btn[disabled]:active {
+  transform: none;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.icon {
+  height: 100px;
+  width: 105px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.score {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 0 auto;
+  min-width: 100%;
+  width: max-content;
+  height: 30px;
+  border: 2px solid rgba(0, 0, 255, 0.33);
+  border-radius: 6px;
+  padding: 0 12px;
+}
+
+.player,
+.computer {
+  position: relative;
+}
+
+.player .score {
+  right: 0;
+}
+
+.player .computer {
+  left: 0;
+}
